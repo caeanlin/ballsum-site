@@ -48,23 +48,24 @@
         /* 導覽列 */
         .navbar-brand img { height: 50px; } /* Logo 高度 */
         
-/* 首頁主視覺 (Hero) */
-        .hero-section {
+        /* 首頁主視覺 (Hero) */
+.hero-section {
             background: url('images/hero-bg-wide2.jpg');
-            background-size: cover; 
+            background-size: cover;
             
-            /* 修改重點：調整對齊位置，讓臉部更有機會露出來 */
-            background-position: center 25%; 
+            /* 修改重點：將圖片重心設為 center center 或 right center
+               這樣當視窗變窄時，人物比較不會被切掉 */
+            background-position: center center; 
             
-            /* 修改重點：降低高度，避免瀏覽器為了填滿高度而過度放大圖片 */
-            height: 60vh; 
-            /* 如果覺得 60vh 太矮，可以設 min-height: 500px; 確保內容不被切掉 */
-            min-height: 500px;
-
+            /* 建議高度稍微調低一點，讓畫面比例更好看 */
+            height: 75vh; 
+            
             display: flex;
             align-items: center;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* 加重陰影讓文字在亮背景也能閱讀 */
+            
+            /* 加強陰影：因為文字移到左邊可能背景較雜，加強陰影可提升可讀性 */
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.9); 
         }
         
         /* 增加手機版的調整，手機版通常比較直長，需要特別處理 */
