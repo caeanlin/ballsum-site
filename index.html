@@ -50,7 +50,6 @@
         
         /* 首頁主視覺 (Hero) */
         .hero-section {
-            /* 修改：移除 linear-gradient 黑色遮罩，僅保留圖片 */
             background: url('images/hero-bg-wide.jpg');
             background-size: cover;
             background-position: center top; /* 聚焦在人物上半身 */
@@ -58,7 +57,6 @@
             display: flex;
             align-items: center;
             color: white;
-            /* 保留文字陰影，確保在沒有黑色遮罩的情況下文字依然清晰 */
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
 
@@ -106,7 +104,6 @@
             <h1 class="display-3 fw-bold mb-4">Ballsum 伯神</h1>
             <h2 class="h2 mb-4">精密模具計數器與工具機對刀儀的全球領導者</h2>
             <p class="lead mb-5">業界唯一突破 200°C 耐高溫技術，通過 SGS 與 CE 雙重認證。<br>ISO 9001 品質保證，為您的自動化產線提供最精確的數據監控。</p>
-            <!-- 修改：移除了兩個按鈕連結 -->
         </div>
     </header>
 
@@ -167,9 +164,8 @@
 
                 <div class="col-md-4">
                     <div class="card product-card h-100">
-                        <div class="d-flex align-items-center justify-content-center bg-secondary text-white" style="height: 250px;">
-                            <i class="fas fa-cogs fa-5x"></i>
-                        </div>
+                        <!-- 修改：加入照片 images/guidesets.jpg -->
+                        <img src="images/guidesets.jpg" class="card-img-top" alt="Ballsum 直線鋼珠軸承 Guide Sets">
                         <div class="card-body">
                             <h3 class="card-title h4">直線鋼珠軸承</h3>
                             <p class="card-text">提供自動化設備平穩、低摩擦的直線運動解決方案。</p>
@@ -240,7 +236,6 @@
 
     <section id="contact" class="py-5 bg-dark text-white">
         <div class="container">
-            <!-- 修改：將聯絡資訊置中，並移除右側表單 -->
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
                     <h2 class="text-white mb-4">全球服務網絡 & 聯絡我們</h2>
