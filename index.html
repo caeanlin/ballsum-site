@@ -48,16 +48,31 @@
         /* 導覽列 */
         .navbar-brand img { height: 50px; } /* Logo 高度 */
         
-        /* 首頁主視覺 (Hero) */
+/* 首頁主視覺 (Hero) */
         .hero-section {
             background: url('images/hero-bg-wide.jpg');
-            background-size: cover;
-            background-position: center top; /* 聚焦在人物上半身 */
-            height: 85vh;
+            background-size: cover; 
+            
+            /* 修改重點：調整對齊位置，讓臉部更有機會露出來 */
+            background-position: center 25%; 
+            
+            /* 修改重點：降低高度，避免瀏覽器為了填滿高度而過度放大圖片 */
+            height: 60vh; 
+            /* 如果覺得 60vh 太矮，可以設 min-height: 500px; 確保內容不被切掉 */
+            min-height: 500px;
+
             display: flex;
             align-items: center;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* 加重陰影讓文字在亮背景也能閱讀 */
+        }
+        
+        /* 增加手機版的調整，手機版通常比較直長，需要特別處理 */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 50vh;
+                background-position: center center;
+            }
         }
 
         /* 產品卡片 */
